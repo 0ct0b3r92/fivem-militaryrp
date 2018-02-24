@@ -14,7 +14,9 @@ You may use any resources for Essential Mode and ESX.
 
 4. Make any changes to the .cfg that is wished.
 
-5. Profit!
+5. Run the "military.sql" file on your MySQL Server
+
+6. Profit!
 
 **In-Game:**
 
