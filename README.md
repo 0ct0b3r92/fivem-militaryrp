@@ -18,14 +18,14 @@ You may use any resources for Essential Mode and ESX.
 
 **In-Game:**
 
-*Default Faction Names:*
+**Default Faction Names:**
 
 - United States Army = unitedstatesarmy
 - United Kingdom Army = unitedkingdomarmy
 - Russian Federation Army = russianfederationarmy
 - People's Liberation Army (China) = chinaarmy
 
-*Default Faction Ranks:*
+**Default Faction Ranks:**
 
 - 0 = Soldier
 - 1 = Non Commanding Officer
