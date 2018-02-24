@@ -6,6 +6,10 @@ You may use any resources for Essential Mode and ESX.
 
 **Install:**
 
+(MAKE SURE YOU DO NOT HAVE ANY OF THESE RESOURCES IN THE SERVER ALREADY)
+
+(IF THEY ARE IN THE SERVER; DELETE THEM.)
+
 1. Download the repository.
 
 2. Copy the [militaryrp] folder to the resources folder.
