@@ -50,3 +50,10 @@ You may use any resources for Essential Mode and ESX.
   
   You can create a Rank under the "job_grades" table in MySQL.
   
+# Credits
+
+- ESX Team (Base)
+- Kanersps (Base)
+- Brouznouf (MySQL-Async)
+
+  
