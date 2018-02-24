@@ -32,11 +32,11 @@ You may use any resources for Essential Mode and ESX.
 - 2 = Commanding Officer
 - 3 = Commander
 
-1. Setting a Player's Faction
+**1. Setting a Player's Faction**
 
   You can add a player to a faction and set their rank by doing "/setjob [ID] [faction] [rank]"
   
-2. Create a Rank
+**2. Create a Rank**
   
   You can create a Rank under the "job_grades" table in MySQL.
   
