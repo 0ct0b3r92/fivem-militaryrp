@@ -72,6 +72,8 @@ AddEventHandler('playerSpawned', function()
     LoadoutLoaded = true
     PlayerSpawned = true
 
+    SetPedDefaultComponentVariation(playerPed)
+
   end)
 
 end)

@@ -10,13 +10,17 @@ You may use any resources for Essential Mode and ESX.
 
 2. Copy the [militaryrp] folder to the resources folder.
 
-3. Move the "server.cfg" to the root of cfx-server-data
+3. Move the "fivem-map-skater" to the resources folder.
 
-4. Make any changes to the .cfg that is wished.
+4. Delete the "fivem-map-hipster" from the resources folder.
 
-5. Run the "military.sql" file on your MySQL Server
+5. Move the "server.cfg" to the root of cfx-server-data
 
-6. Profit!
+6. Make any changes to the .cfg that is wished.
+
+7. Run the "military.sql" file on your MySQL Server
+
+8. Profit!
 
 **In-Game:**
 

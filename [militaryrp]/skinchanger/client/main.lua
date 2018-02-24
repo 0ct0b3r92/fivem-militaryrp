@@ -102,7 +102,7 @@ function GetMaxVals()
   local playerPed = GetPlayerPed(-1)
 
   local data = {
-    sex           = 1,
+    sex           = 0,
     face          = 0,
     skin          = 45,
     age_1         = GetNumHeadOverlayValues(3)-1,
