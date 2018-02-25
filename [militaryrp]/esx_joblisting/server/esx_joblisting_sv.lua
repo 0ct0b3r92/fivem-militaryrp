@@ -48,7 +48,7 @@ RegisterServerEvent('esx_joblisting:checkJobUK')
 AddEventHandler('esx_joblisting:checkJobUK', function(job)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
-	if xPlayer.job.name == ("unitedkingdomarmy") or xPlayer.job.name == ("unemployed") then 
+	if xPlayer.job.name == ("unitedkingdomarmy") or xPlayer.job.name == ("unitedkingdomairforce") or xPlayer.job.name == ("unemployed") then 
 		TriggerClientEvent("esx_joblisting:TP2UK", source)
 	else 
 		TriggerClientEvent("esx_joblisting:notJob", source)
@@ -59,7 +59,7 @@ RegisterServerEvent('esx_joblisting:checkJobRF')
 AddEventHandler('esx_joblisting:checkJobRF', function(job)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
-	if xPlayer.job.name == ("russianfederationarmy") or xPlayer.job.name == ("unemployed") then 
+	if xPlayer.job.name == ("russianfederationarmy") or xPlayer.job.name == ("russianfederationairforce") or xPlayer.job.name == ("unemployed") then 
 		TriggerClientEvent("esx_joblisting:TP2RF", source)
 	else 
 		TriggerClientEvent("esx_joblisting:notJob", source)
@@ -70,7 +70,7 @@ RegisterServerEvent('esx_joblisting:checkJobCN')
 AddEventHandler('esx_joblisting:checkJobCN', function(job)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
-	if xPlayer.job.name == ("chinaarmy") or xPlayer.job.name == ("unemployed") then 
+	if xPlayer.job.name == ("chinaarmy") or xPlayer.job.name == ("chinaairforce") or xPlayer.job.name == ("unemployed") then 
 		TriggerClientEvent("esx_joblisting:TP2CN", source)
 	else 
 		TriggerClientEvent("esx_joblisting:notJob", source)
