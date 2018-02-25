@@ -76,7 +76,8 @@ end
 
 -- Default groups
 user = Group("user", "")
-admin = Group("admin", "user")
+ranker = Group("ranker", "user")
+admin = Group("admin", "ranker")
 superadmin = Group("superadmin", "admin")
 
 -- Developer, unused

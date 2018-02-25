@@ -121,7 +121,7 @@ function OpenArmoryMenu(station)
         table.insert(elements, {label = "Carbine Rifle", value = 'WEAPON_CARBINERIFLE'})
         table.insert(elements, {label = "Grenade", value = 'WEAPON_GRENADE'})
         table.insert(elements, {label = "Flare Gun", value = 'WEAPON_FLAREGUN'})
-        table.insert(elements, {label = "Parachute", value = 'WEAPON_PARACHUTE'})
+        table.insert(elements, {label = "Parachute", value = 'GADGET_PARACHUTE'})
       end
       if PlayerData.job.grade_name == 'nco' then
         table.insert(elements, {label = "Baton", value = 'WEAPON_NIGHTSTICK'})
@@ -131,7 +131,7 @@ function OpenArmoryMenu(station)
         table.insert(elements, {label = "Carbine Rifle", value = 'WEAPON_CARBINERIFLE'})
         table.insert(elements, {label = "Grenade", value = 'WEAPON_GRENADE'})
         table.insert(elements, {label = "Flare Gun", value = 'WEAPON_FLAREGUN'})
-        table.insert(elements, {label = "Parachute", value = 'WEAPON_PARACHUTE'})
+        table.insert(elements, {label = "Parachute", value = 'GADGET_PARACHUTE'})
         table.insert(elements, {label = "Shotgun", value = 'WEAPON_PUMPSHOTGUN'})
         table.insert(elements, {label = "Sniper", value = 'WEAPON_HEAVYSNIPER'})
         table.insert(elements, {label = "Tear Gas", value = 'WEAPON_BZGAS'})
@@ -145,7 +145,7 @@ function OpenArmoryMenu(station)
         table.insert(elements, {label = "Carbine Rifle", value = 'WEAPON_CARBINERIFLE'})
         table.insert(elements, {label = "Grenade", value = 'WEAPON_GRENADE'})
         table.insert(elements, {label = "Flare Gun", value = 'WEAPON_FLAREGUN'})
-        table.insert(elements, {label = "Parachute", value = 'WEAPON_PARACHUTE'})
+        table.insert(elements, {label = "Parachute", value = 'GADGET_PARACHUTE'})
         table.insert(elements, {label = "Shotgun", value = 'WEAPON_PUMPSHOTGUN'})
         table.insert(elements, {label = "Sniper", value = 'WEAPON_HEAVYSNIPER'})
         table.insert(elements, {label = "Tear Gas", value = 'WEAPON_BZGAS'})
@@ -159,12 +159,24 @@ function OpenArmoryMenu(station)
         table.insert(elements, {label = "Carbine Rifle", value = 'WEAPON_CARBINERIFLE'})
         table.insert(elements, {label = "Grenade", value = 'WEAPON_GRENADE'})
         table.insert(elements, {label = "Flare Gun", value = 'WEAPON_FLAREGUN'})
-        table.insert(elements, {label = "Parachute", value = 'WEAPON_PARACHUTE'})
+        table.insert(elements, {label = "Parachute", value = 'GADGET_PARACHUTE'})
         table.insert(elements, {label = "Shotgun", value = 'WEAPON_PUMPSHOTGUN'})
         table.insert(elements, {label = "Sniper", value = 'WEAPON_HEAVYSNIPER'})
         table.insert(elements, {label = "Tear Gas", value = 'WEAPON_BZGAS'})
         table.insert(elements, {label = "C4", value = 'WEAPON_STICKYBOMB'})
       end
+--Air Force
+      if PlayerData.job.grade_name == 'pilot' then
+        table.insert(elements, {label = "Baton", value = 'WEAPON_NIGHTSTICK'})
+        table.insert(elements, {label = "Flashlight", value = 'WEAPON_FLASHLIGHT'})
+        table.insert(elements, {label = "Pistol", value = 'WEAPON_COMBATPISTOL'})
+        table.insert(elements, {label = "SMG", value = 'WEAPON_ASSAULTSMG'})
+        table.insert(elements, {label = "Carbine Rifle", value = 'WEAPON_CARBINERIFLE'})
+        table.insert(elements, {label = "Grenade", value = 'WEAPON_GRENADE'})
+        table.insert(elements, {label = "Flare Gun", value = 'WEAPON_FLAREGUN'})
+        table.insert(elements, {label = "Parachute", value = 'GADGET_PARACHUTE'})
+      end
+
 
     ESX.UI.Menu.CloseAll()
 
@@ -277,6 +289,9 @@ function OpenVehicleSpawnerMenu(station, partNum)
       table.insert(elements, { label = 'Tank', value = 'rhino' })
       table.insert(elements, { label = 'Barracks Truck', value = 'barracks' })
       table.insert(elements, { label = 'Humvee', value = 'crusader' })
+    end
+    if PlayerData.job.name == ("unitedstatesairforce") or PlayerData.job.name == ("unitedkingdomairforce") or PlayerData.job.name == ("russianairforce") or PlayerData.job.name == ("chinaairforce") then
+      table.insert(elements, { label = 'You are not permitted to use vehicles.', value = '' })
     end
     
     ---------------------------------------------------------------------
@@ -411,7 +426,7 @@ function OpenAircraftSpawnerMenu(station, partNum)
     -------------------------------------------------------------------------------------------------------
     --Label = Item Title in Menu | Value = Vehicle's name coding wise (ex: label = 'Tank', value = rhino)--
     -------------------------------------------------------------------------------------------------------.
-  if PlayerData.job.grade_name == 'pilot' then
+  if PlayerData.job.name == ("unitedstatesairforce") or PlayerData.job.name == ("unitedkingdomairforce") or PlayerData.job.name == ("russianairforce") or PlayerData.job.name == ("chinaairforce") then
     table.insert(elements, { label = 'F-16', value = 'lazer' })
     table.insert(elements, { label = 'CH-46', value = 'cargobob' })
     table.insert(elements, { label = 'UH-1Y', value = 'valkyrie' })
@@ -419,7 +434,7 @@ function OpenAircraftSpawnerMenu(station, partNum)
     table.insert(elements, { label = 'AF-01', value = 'miljet' })
     table.insert(elements, { label = 'C-130', value = 'titan' })
   end
-  if PlayerData.job.grade_name ~= 'pilot' then
+  if PlayerData.job.name == ("unitedstatesarmy") or PlayerData.job.name == ("unitedkingdomarmy") or PlayerData.job.name == ("russianfederationarmy") or PlayerData.job.name == ("chinaarmy") then
     table.insert(elements, { label = 'You are not permitted to use an aircraft.', value = '' })
   end
 
