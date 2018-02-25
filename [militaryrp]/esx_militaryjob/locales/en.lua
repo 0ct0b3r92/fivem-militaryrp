@@ -18,7 +18,8 @@ Locales['en'] = {
   ['armory'] = 'armory',
   ['open_armory'] = 'press ~INPUT_CONTEXT~ to access the armory',
   -- Vehicles
-  ['vehicle_menu'] = 'vehicle',
+  ['vehicle_menu'] = 'vehicles',
+  ['aircraft_menu'] = 'aircrafts',
   ['vehicle_out'] = 'there is already a car out of the garage',
   ['vehicle_spawner'] = 'press ~INPUT_CONTEXT~ to take out a vehicle',
   ['aircraft_spawner'] = 'press ~INPUT_CONTEXT~ to take out an aircraft',

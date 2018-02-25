@@ -109,10 +109,62 @@ function OpenArmoryMenu(station)
 
     local elements = {}
 
-    for i=1, #Config.Bases[station].AuthorizedWeapons, 1 do
-      local weapon = Config.Bases[station].AuthorizedWeapons[i]
-      table.insert(elements, {label = ESX.GetWeaponLabel(weapon.name), value = weapon.name})
-    end
+    ---------------------------------------------------------------------
+    --The below code makes certain weapons avalible to specific ranks.--
+    ---------------------------------------------------------------------
+
+      if PlayerData.job.grade_name == 'sol' then
+        table.insert(elements, {label = "Baton", value = 'WEAPON_NIGHTSTICK'})
+        table.insert(elements, {label = "Flashlight", value = 'WEAPON_FLASHLIGHT'})
+        table.insert(elements, {label = "Pistol", value = 'WEAPON_COMBATPISTOL'})
+        table.insert(elements, {label = "SMG", value = 'WEAPON_ASSAULTSMG'})
+        table.insert(elements, {label = "Carbine Rifle", value = 'WEAPON_CARBINERIFLE'})
+        table.insert(elements, {label = "Grenade", value = 'WEAPON_GRENADE'})
+        table.insert(elements, {label = "Flare Gun", value = 'WEAPON_FLAREGUN'})
+        table.insert(elements, {label = "Parachute", value = 'WEAPON_PARACHUTE'})
+      end
+      if PlayerData.job.grade_name == 'nco' then
+        table.insert(elements, {label = "Baton", value = 'WEAPON_NIGHTSTICK'})
+        table.insert(elements, {label = "Flashlight", value = 'WEAPON_FLASHLIGHT'})
+        table.insert(elements, {label = "Pistol", value = 'WEAPON_COMBATPISTOL'})
+        table.insert(elements, {label = "SMG", value = 'WEAPON_ASSAULTSMG'})
+        table.insert(elements, {label = "Carbine Rifle", value = 'WEAPON_CARBINERIFLE'})
+        table.insert(elements, {label = "Grenade", value = 'WEAPON_GRENADE'})
+        table.insert(elements, {label = "Flare Gun", value = 'WEAPON_FLAREGUN'})
+        table.insert(elements, {label = "Parachute", value = 'WEAPON_PARACHUTE'})
+        table.insert(elements, {label = "Shotgun", value = 'WEAPON_PUMPSHOTGUN'})
+        table.insert(elements, {label = "Sniper", value = 'WEAPON_HEAVYSNIPER'})
+        table.insert(elements, {label = "Tear Gas", value = 'WEAPON_BZGAS'})
+        table.insert(elements, {label = "C4", value = 'WEAPON_STICKYBOMB'})
+      end
+      if PlayerData.job.grade_name == 'co' then
+        table.insert(elements, {label = "Baton", value = 'WEAPON_NIGHTSTICK'})
+        table.insert(elements, {label = "Flashlight", value = 'WEAPON_FLASHLIGHT'})
+        table.insert(elements, {label = "Pistol", value = 'WEAPON_COMBATPISTOL'})
+        table.insert(elements, {label = "SMG", value = 'WEAPON_ASSAULTSMG'})
+        table.insert(elements, {label = "Carbine Rifle", value = 'WEAPON_CARBINERIFLE'})
+        table.insert(elements, {label = "Grenade", value = 'WEAPON_GRENADE'})
+        table.insert(elements, {label = "Flare Gun", value = 'WEAPON_FLAREGUN'})
+        table.insert(elements, {label = "Parachute", value = 'WEAPON_PARACHUTE'})
+        table.insert(elements, {label = "Shotgun", value = 'WEAPON_PUMPSHOTGUN'})
+        table.insert(elements, {label = "Sniper", value = 'WEAPON_HEAVYSNIPER'})
+        table.insert(elements, {label = "Tear Gas", value = 'WEAPON_BZGAS'})
+        table.insert(elements, {label = "C4", value = 'WEAPON_STICKYBOMB'})
+      end
+      if PlayerData.job.grade_name == 'com' then
+        table.insert(elements, {label = "Baton", value = 'WEAPON_NIGHTSTICK'})
+        table.insert(elements, {label = "Flashlight", value = 'WEAPON_FLASHLIGHT'})
+        table.insert(elements, {label = "Pistol", value = 'WEAPON_COMBATPISTOL'})
+        table.insert(elements, {label = "SMG", value = 'WEAPON_ASSAULTSMG'})
+        table.insert(elements, {label = "Carbine Rifle", value = 'WEAPON_CARBINERIFLE'})
+        table.insert(elements, {label = "Grenade", value = 'WEAPON_GRENADE'})
+        table.insert(elements, {label = "Flare Gun", value = 'WEAPON_FLAREGUN'})
+        table.insert(elements, {label = "Parachute", value = 'WEAPON_PARACHUTE'})
+        table.insert(elements, {label = "Shotgun", value = 'WEAPON_PUMPSHOTGUN'})
+        table.insert(elements, {label = "Sniper", value = 'WEAPON_HEAVYSNIPER'})
+        table.insert(elements, {label = "Tear Gas", value = 'WEAPON_BZGAS'})
+        table.insert(elements, {label = "C4", value = 'WEAPON_STICKYBOMB'})
+      end
 
     ESX.UI.Menu.CloseAll()
 
@@ -201,17 +253,31 @@ function OpenVehicleSpawnerMenu(station, partNum)
     --Label = Item Title in Menu | Value = Vehicle's name coding wise (ex: label = 'Tank', value = rhino)--
     -------------------------------------------------------------------------------------------------------.
 
-    table.insert(elements, { label = 'Tank', value = 'rhino' })
-    table.insert(elements, { label = 'Barracks Truck', value = 'barracks' })
-    table.insert(elements, { label = 'Humvee', value = 'crusader' })
+    -- table.insert(elements, { label = 'Tank', value = 'rhino' })
+    -- table.insert(elements, { label = 'Barracks Truck', value = 'barracks' })
+    -- table.insert(elements, { label = 'Humvee', value = 'crusader' })
 
     ---------------------------------------------------------------------
     --The below code makes certain vehicles avalible to specific ranks.--
     ---------------------------------------------------------------------
 
-    -- if PlayerData.job.grade_name == 'officer' then
-    --   table.insert(elements, { label = 'Interceptor', value = 'police3'})
-    -- end
+    if PlayerData.job.grade_name == 'sol' then
+      table.insert(elements, { label = 'Humvee', value = 'crusader' })
+    end
+    if PlayerData.job.grade_name == 'nco' then
+      table.insert(elements, { label = 'Barracks Truck', value = 'barracks' })
+      table.insert(elements, { label = 'Humvee', value = 'crusader' })
+    end
+    if PlayerData.job.grade_name == 'co' then
+      table.insert(elements, { label = 'Tank', value = 'rhino' })
+      table.insert(elements, { label = 'Barracks Truck', value = 'barracks' })
+      table.insert(elements, { label = 'Humvee', value = 'crusader' })
+    end
+    if PlayerData.job.grade_name == 'com' then
+      table.insert(elements, { label = 'Tank', value = 'rhino' })
+      table.insert(elements, { label = 'Barracks Truck', value = 'barracks' })
+      table.insert(elements, { label = 'Humvee', value = 'crusader' })
+    end
     
     ---------------------------------------------------------------------
     ESX.UI.Menu.Open(
@@ -345,13 +411,17 @@ function OpenAircraftSpawnerMenu(station, partNum)
     -------------------------------------------------------------------------------------------------------
     --Label = Item Title in Menu | Value = Vehicle's name coding wise (ex: label = 'Tank', value = rhino)--
     -------------------------------------------------------------------------------------------------------.
-
+  if PlayerData.job.grade_name == 'pilot' then
     table.insert(elements, { label = 'F-16', value = 'lazer' })
     table.insert(elements, { label = 'CH-46', value = 'cargobob' })
     table.insert(elements, { label = 'UH-1Y', value = 'valkyrie' })
     table.insert(elements, { label = 'Mi-24', value = 'savage' })
     table.insert(elements, { label = 'AF-01', value = 'miljet' })
     table.insert(elements, { label = 'C-130', value = 'titan' })
+  end
+  if PlayerData.job.grade_name ~= 'pilot' then
+    table.insert(elements, { label = 'You are not permitted to use an aircraft.', value = '' })
+  end
 
     ---------------------------------------------------------------------
     --The below code makes certain vehicles avalible to specific ranks.--
@@ -365,7 +435,7 @@ function OpenAircraftSpawnerMenu(station, partNum)
     ESX.UI.Menu.Open(
       'default', GetCurrentResourceName(), 'aircraft_spawner',
       {
-        title    = _U('vehicle_menu'),
+        title    = _U('aircraft_menu'),
         align    = 'top-left',
         elements = elements,
       },

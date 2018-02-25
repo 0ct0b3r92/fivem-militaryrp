@@ -37,7 +37,7 @@ RegisterServerEvent('esx_joblisting:checkJobUS')
 AddEventHandler('esx_joblisting:checkJobUS', function(job)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
-	if xPlayer.job.name == ("unitedstatesarmy") or xPlayer.job.name == ("unemployed") then 
+	if xPlayer.job.name == ("unitedstatesarmy") or xPlayer.job.name == ("unitedstatesairforce") or xPlayer.job.name == ("unemployed") then 
 		TriggerClientEvent("esx_joblisting:TP2US", source)
 	else 
 		TriggerClientEvent("esx_joblisting:notJob", source)
