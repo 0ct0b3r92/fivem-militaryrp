@@ -44,7 +44,7 @@ You may use any resources for Essential Mode and ESX.
 
 **1. Setting a Player's Faction**
 
-  You can add a player to a faction and set their rank by doing "/setjob [ID] [faction] [rank]"
+  You can add a player to a faction and set their rank by doing "/setrank [ID] [faction] [rank]"
   
 **2. Create a Rank**
   
