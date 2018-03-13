@@ -22,7 +22,7 @@ You may use any resources for Essential Mode and ESX.
 
 6. Make any changes to the .cfg that is wished.
 
-7. Run the "military.sql" file on your MySQL Server (Repeat the Query until it shows 53 Warnings twice.).
+7. Run the "military.sql" file on your MySQL Server (Repeat the Query until it shows the same amount of warnings twice.).
 
 8. Profit!
 
